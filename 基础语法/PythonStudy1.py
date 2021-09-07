@@ -81,3 +81,49 @@ var1 = 1
 var2 = 2
 del var1 # 删除了var1这个变量，print(var1)时则报错
 #del var1,var2 #已经删除的变量无法重复删除
+
+#List 操作
+a = [1, 2, 3, 4, 5, 6,"aaa"]
+a[0] = 9 #針對單個指定元素賦值
+print(a)
+a[2:5] = [13, 14, 15] #針對
+print(a)
+a[2:5] = []
+print(a)
+
+#Tuple 操作
+tup = ( 'abcd', 786 , 2.23, 'runoob', 70.2  )
+# tup[0] = 1 tuple的元素無法操作，此處運行會報錯
+#string這種操作也會報錯
+
+#Python中 string list tuple都屬於序列，操作方式類似
+
+#由此可看出 string是一種特殊存在的元組
+
+#Set操作 Python中Set表示為集合
+sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu','Google'}
+print(sites) #輸出時，會自動刪除重複的對象
+
+# 成员测试，判斷是否存在
+if 'Runoob' in sites :
+    print('Runoob 在集合中')
+else :
+    print('Runoob 不在集合中')
+
+# set可以进行集合运算，交集、並集、差集
+a = set('abracadabra')
+b = set('alacazam')
+print(a)
+print(a - b)     # a 和 b 的差集
+print(a | b)     # a 和 b 的并集
+print(a & b)     # a 和 b 的交集
+print(a ^ b)     # a 和 b 中不同时存在的元素
+
+#Dictionary key value，
+dict = {}
+dict['one'] = "1 - 菜鸟教程"
+dict[2]     = "2 - 菜鸟工具"
+print(dict)
+tinydict = {'name': 'runoob','code':1, 'site': 'www.runoob.com'} #結構
+print(tinydict.keys()) #輸出所有key
+print(tinydict.values()) #輸出所有value
